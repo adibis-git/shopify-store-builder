@@ -66,20 +66,20 @@ export default function LandingPage() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-background text-foreground">
       {/* Header */}
-      <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur">
+      <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="h-8 w-8 rounded-lg bg-blue-600 flex items-center justify-center">
               <ShoppingCart className="h-5 w-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-slate-900">StoreBuilder</span>
+            <span className="text-xl font-bold text-foreground">StoreBuilder</span>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-sm text-slate-600 hover:text-slate-900">Features</a>
-            <a href="#pricing" className="text-sm text-slate-600 hover:text-slate-900">Pricing</a>
-            <a href="#faq" className="text-sm text-slate-600 hover:text-slate-900">FAQ</a>
+            <a href="#features" className="text-sm text-muted-foreground hover:text-foreground">Features</a>
+            <a href="#pricing" className="text-sm text-muted-foreground hover:text-foreground">Pricing</a>
+            <a href="#faq" className="text-sm text-muted-foreground hover:text-foreground">FAQ</a>
             <ThemeToggle />
             <Dialog open={isOpen} onOpenChange={setIsOpen}>
               <DialogTrigger asChild>
@@ -157,10 +157,10 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 md:py-32 text-center">
         <Badge className="mb-4 inline-block">Conversion-Focused Design</Badge>
-        <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+        <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
           Build a High-Converting Shopify Store That Actually Sells
         </h1>
-        <p className="text-lg md:text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
+        <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
           Custom-built or self-hosted ecommerce stores with conversion-focused design. Done-for-you or done-with-you options.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -175,7 +175,7 @@ export default function LandingPage() {
             See Example Stores <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </div>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-slate-600">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
             <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
             <span>Trusted by 100+ brands</span>
@@ -188,9 +188,9 @@ export default function LandingPage() {
       </section>
 
       {/* Problem-Agitate-Solution Section */}
-      <section className="bg-slate-50 py-20">
+      <section className="bg-muted py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-16">
             Your Store Isn't Broken—It's Just Not Built to Convert
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -202,33 +202,33 @@ export default function LandingPage() {
               <CardContent className="space-y-3">
                 <div className="flex gap-3">
                   <div className="text-red-600 font-bold">•</div>
-                  <p className="text-slate-600">Low conversion rates despite traffic</p>
+                  <p className="text-muted-foreground">Low conversion rates despite traffic</p>
                 </div>
                 <div className="flex gap-3">
                   <div className="text-red-600 font-bold">•</div>
-                  <p className="text-slate-600">Poor mobile experience losing sales</p>
+                  <p className="text-muted-foreground">Poor mobile experience losing sales</p>
                 </div>
                 <div className="flex gap-3">
                   <div className="text-red-600 font-bold">•</div>
-                  <p className="text-slate-600">Confusing checkout flow</p>
+                  <p className="text-muted-foreground">Confusing checkout flow</p>
                 </div>
                 <div className="flex gap-3">
                   <div className="text-red-600 font-bold">•</div>
-                  <p className="text-slate-600">Generic design that doesn't stand out</p>
+                  <p className="text-muted-foreground">Generic design that doesn't stand out</p>
                 </div>
               </CardContent>
             </Card>
 
             {/* Agitation */}
-            <Card className="border-2 border-blue-200 bg-blue-50">
+            <Card className="border-2 border-primary/20 bg-primary/5">
               <CardHeader>
                 <CardTitle className="text-xl">The Reality</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-slate-700 font-semibold mb-4">
+                <p className="text-foreground font-semibold mb-4">
                   "You're not bad at ecommerce — your store just isn't built to convert."
                 </p>
-                <p className="text-slate-600">
+                <p className="text-muted-foreground">
                   Most stores are designed to look pretty, not to sell. They ignore buyer psychology, friction points, and the psychology of trust. Every pixel should drive conversions.
                 </p>
               </CardContent>
@@ -242,19 +242,19 @@ export default function LandingPage() {
               <CardContent className="space-y-3">
                 <div className="flex gap-3">
                   <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-slate-600">Sales psychology-driven design</p>
+                  <p className="text-muted-foreground">Sales psychology-driven design</p>
                 </div>
                 <div className="flex gap-3">
                   <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-slate-600">Optimized checkout & trust signals</p>
+                  <p className="text-muted-foreground">Optimized checkout & trust signals</p>
                 </div>
                 <div className="flex gap-3">
                   <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-slate-600">Mobile-first, conversion-focused</p>
+                  <p className="text-muted-foreground">Mobile-first, conversion-focused</p>
                 </div>
                 <div className="flex gap-3">
                   <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-slate-600">Measurable results & ongoing optimization</p>
+                  <p className="text-muted-foreground">Measurable results & ongoing optimization</p>
                 </div>
               </CardContent>
             </Card>
@@ -264,10 +264,10 @@ export default function LandingPage() {
 
       {/* Example Store Previews */}
       <section className="container mx-auto px-4 py-20">
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-4">
           Example Stores We've Built
         </h2>
-        <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
           See how we've transformed stores across different industries with conversion-focused design.
         </p>
         <div className="grid md:grid-cols-3 gap-8">
@@ -277,7 +277,7 @@ export default function LandingPage() {
             { name: 'Tech Gadgets', conversion: '4.1%', increase: '+210%', image: '⚡' },
           ].map((store, idx) => (
             <Card key={idx} className="overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center text-6xl">
+              <div className="h-48 bg-gradient-to-br from-muted to-muted/80 flex items-center justify-center text-6xl">
                 {store.image}
               </div>
               <CardHeader>
@@ -296,9 +296,9 @@ export default function LandingPage() {
       </section>
 
       {/* Key Features & Benefits */}
-      <section id="features" className="bg-slate-50 py-20">
+      <section id="features" className="bg-muted py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-16">
             Built for Conversion
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -340,7 +340,7 @@ export default function LandingPage() {
                   <CardTitle className="text-lg">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-slate-600">{feature.desc}</p>
+                  <p className="text-muted-foreground">{feature.desc}</p>
                 </CardContent>
               </Card>
             ))}
@@ -350,10 +350,10 @@ export default function LandingPage() {
 
       {/* Pricing Section */}
       <section id="pricing" className="container mx-auto px-4 py-20">
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-4">
           Two Ways to Build Your Store
         </h2>
-        <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
           Choose the option that works best for your business.
         </p>
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -363,7 +363,7 @@ export default function LandingPage() {
               <CardTitle>Shopify Store Setup</CardTitle>
               <CardDescription>Hosted & Managed</CardDescription>
               <div className="text-3xl font-bold mt-4">$2,500</div>
-              <p className="text-sm text-slate-600">One-time setup</p>
+              <p className="text-sm text-muted-foreground">One-time setup</p>
             </CardHeader>
             <CardContent className="space-y-4">
               <ul className="space-y-3">
@@ -377,7 +377,7 @@ export default function LandingPage() {
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-slate-700">{item}</span>
+                    <span className="text-foreground">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -390,13 +390,13 @@ export default function LandingPage() {
           </Card>
 
           {/* Headless Option */}
-          <Card className="border-2 border-blue-200">
+          <Card className="border-2 border-primary/30">
             <CardHeader>
               <Badge className="w-fit mb-2">Recommended</Badge>
               <CardTitle>Self-Hosted Custom Store</CardTitle>
               <CardDescription>Next.js / Headless</CardDescription>
               <div className="text-3xl font-bold mt-4">$4,500</div>
-              <p className="text-sm text-slate-600">One-time setup</p>
+              <p className="text-sm text-muted-foreground">One-time setup</p>
             </CardHeader>
             <CardContent className="space-y-4">
               <ul className="space-y-3">
@@ -411,7 +411,7 @@ export default function LandingPage() {
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-slate-700">{item}</span>
+                    <span className="text-foreground">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -426,9 +426,9 @@ export default function LandingPage() {
       </section>
 
       {/* Social Proof Section */}
-      <section className="bg-slate-50 py-20">
+      <section className="bg-muted py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-16">
             Trusted by Growing Brands
           </h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -465,7 +465,7 @@ export default function LandingPage() {
                       <Star key={i} className="h-4 w-4 text-yellow-500 fill-yellow-500" />
                     ))}
                   </div>
-                  <p className="text-slate-700 italic mb-4">"{testimonial.quote}"</p>
+                  <p className="text-foreground italic mb-4">"{testimonial.quote}"</p>
                   <CardTitle className="text-base">{testimonial.author}</CardTitle>
                   <CardDescription>{testimonial.company}</CardDescription>
                 </CardHeader>
@@ -477,7 +477,7 @@ export default function LandingPage() {
 
       {/* FAQ Section */}
       <section id="faq" className="container mx-auto px-4 py-20">
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-12">
           Frequently Asked Questions
         </h2>
         <div className="max-w-3xl mx-auto">
@@ -528,12 +528,12 @@ export default function LandingPage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-700 py-20">
+      <section className="bg-primary py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
             Let's Build Your Store the Right Way
           </h2>
-          <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
             Get a free audit of your store and a personalized roadmap to increase conversions.
           </p>
           <Dialog open={isOpen} onOpenChange={setIsOpen}>

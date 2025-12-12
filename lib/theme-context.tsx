@@ -8,6 +8,7 @@ interface ThemeContextType {
   theme: Theme
   toggleTheme: () => void
   setTheme: (theme: Theme) => void
+  mounted: boolean
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
@@ -18,13 +19,12 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   // Initialize theme from localStorage and system preference
   useEffect(() => {
-    setMounted(true)
-    
     // Check localStorage first
     const savedTheme = localStorage.getItem('theme') as Theme | null
     if (savedTheme) {
       setThemeState(savedTheme)
       applyTheme(savedTheme)
+      setMounted(true)
       return
     }
 
@@ -36,6 +36,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       setThemeState('light')
       applyTheme('light')
     }
+    
+    setMounted(true)
   }, [])
 
   const applyTheme = (newTheme: Theme) => {
@@ -58,15 +60,11 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     setTheme(newTheme)
   }
 
-  // Don't render until mounted to avoid hydration mismatch
-  if (!mounted) {
-    return <>{children}</>
-  }
-
   const value: ThemeContextType = {
     theme,
     toggleTheme,
     setTheme,
+    mounted,
   }
 
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
@@ -75,7 +73,13 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 export function useTheme() {
   const context = useContext(ThemeContext)
   if (context === undefined) {
-    throw new Error('useTheme must be used within a ThemeProvider')
+    // Return a default value instead of throwing
+    return {
+      theme: 'light' as Theme,
+      toggleTheme: () => {},
+      setTheme: () => {},
+      mounted: false,
+    }
   }
   return context
 }
