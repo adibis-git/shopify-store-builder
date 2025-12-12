@@ -18,9 +18,9 @@ export default function DashboardLayout({
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-background dark:bg-slate-950 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white dark:from-[#0a0a0f] dark:via-slate-900 dark:to-[#0a0a0f] flex items-center justify-center">
         <div className="text-center">
-          <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+          <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
           <p className="mt-4 text-muted-foreground dark:text-slate-400">Loading...</p>
         </div>
       </div>
@@ -37,12 +37,12 @@ export default function DashboardLayout({
   }
 
   return (
-    <div className="min-h-screen bg-background dark:bg-slate-950">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white dark:from-[#0a0a0f] dark:via-slate-900 dark:to-[#0a0a0f]">
       {/* Header */}
-      <header className="sticky top-0 z-40 border-b border-border dark:border-slate-800 bg-background/95 dark:bg-slate-950/95 backdrop-blur">
+      <header className="sticky top-0 z-50 border-b border-slate-200/50 dark:border-white/10 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="h-8 w-8 rounded-lg bg-blue-600 flex items-center justify-center">
+            <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center shadow-lg shadow-blue-500/25">
               <ShoppingCart className="h-5 w-5 text-white" />
             </div>
             <span className="text-xl font-bold text-foreground dark:text-slate-50">StoreBuilder</span>
@@ -90,7 +90,7 @@ export default function DashboardLayout({
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-border dark:border-slate-800 bg-background dark:bg-slate-950">
+          <div className="md:hidden border-t border-slate-200/50 dark:border-white/10 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl">
             <nav className="container mx-auto px-4 py-4 space-y-3">
               <a
                 href="/dashboard"

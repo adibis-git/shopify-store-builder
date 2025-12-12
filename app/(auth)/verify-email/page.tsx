@@ -10,11 +10,19 @@ export default function VerifyEmailPage() {
   const email = searchParams.get('email') || 'your email'
 
   return (
-    <div className="min-h-screen bg-background dark:bg-slate-950 flex flex-col items-center justify-center px-4 py-12">
+    <div className="relative min-h-screen bg-gradient-to-b from-slate-50 to-white dark:from-[#0a0a0f] dark:via-slate-900 dark:to-[#0a0a0f] flex flex-col items-center justify-center px-4 py-12 overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-20 w-72 h-72 bg-green-500/20 dark:bg-green-500/20 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/15 dark:bg-blue-500/20 rounded-full blur-3xl animate-float-slow" />
+        {/* Grid pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      </div>
+
       {/* Header */}
-      <div className="mb-8 text-center">
+      <div className="mb-8 text-center relative z-10">
         <div className="flex items-center justify-center gap-2 mb-4">
-          <div className="h-10 w-10 rounded-lg bg-blue-600 flex items-center justify-center">
+          <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center shadow-lg shadow-blue-500/25">
             <ShoppingCart className="h-6 w-6 text-white" />
           </div>
           <span className="text-2xl font-bold text-foreground dark:text-slate-50">StoreBuilder</span>
@@ -22,7 +30,7 @@ export default function VerifyEmailPage() {
       </div>
 
       {/* Verification Card */}
-      <Card className="w-full max-w-md dark:bg-slate-900 dark:border-slate-700">
+      <Card className="w-full max-w-md bg-white/80 dark:bg-white/5 backdrop-blur-xl border-slate-200 dark:border-white/10 shadow-xl dark:shadow-none relative z-10">
         <CardHeader className="space-y-2 text-center">
           <div className="flex justify-center mb-4">
             <div className="h-16 w-16 rounded-full bg-green-100 dark:bg-green-950 flex items-center justify-center">

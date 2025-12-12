@@ -52,7 +52,7 @@ export function LoginForm() {
   }
 
   return (
-    <Card className="w-full max-w-md dark:bg-slate-900 dark:border-slate-700">
+    <Card className="w-full max-w-md bg-white/80 dark:bg-white/5 backdrop-blur-xl border-slate-200 dark:border-white/10 shadow-xl dark:shadow-none">
       <CardHeader className="space-y-2">
         <CardTitle className="text-2xl dark:text-slate-50">Welcome Back</CardTitle>
         <CardDescription className="dark:text-slate-400">
