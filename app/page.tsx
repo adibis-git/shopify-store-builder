@@ -263,11 +263,11 @@ export default function LandingPage() {
       </section>
 
       {/* Example Store Previews */}
-      <section className="container mx-auto px-4 py-20">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-4">
+      <section className="container mx-auto px-4 py-20 bg-background dark:bg-slate-950">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground dark:text-slate-50 text-center mb-4">
           Example Stores We've Built
         </h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-muted-foreground dark:text-slate-400 mb-12 max-w-2xl mx-auto">
           See how we've transformed stores across different industries with conversion-focused design.
         </p>
         <div className="grid md:grid-cols-3 gap-8">
@@ -277,16 +277,16 @@ export default function LandingPage() {
             { name: 'Tech Gadgets', conversion: '4.1%', increase: '+210%', image: '⚡' },
           ].map((store, idx) => (
             <Card key={idx} className="overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-muted to-muted/80 flex items-center justify-center text-6xl">
+              <div className="h-48 bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-700 flex items-center justify-center text-6xl">
                 {store.image}
               </div>
               <CardHeader>
                 <CardTitle>{store.name}</CardTitle>
-                <CardDescription>Conversion Rate: {store.conversion}</CardDescription>
+                <CardDescription className="dark:text-slate-400">Conversion Rate: {store.conversion}</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold text-green-600 dark:text-green-400 mb-4">{store.increase}</div>
-                <Button variant="outline" className="w-full">
+                <Button variant="outline" className="w-full dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-800">
                   See Full Store <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
               </CardContent>
@@ -334,13 +334,13 @@ export default function LandingPage() {
                 desc: 'We handle setup, training, and ongoing optimization.',
               },
             ].map((feature, idx) => (
-              <Card key={idx}>
+              <Card key={idx} className="dark:bg-slate-900 dark:border-slate-700">
                 <CardHeader>
                   <div className="mb-2">{feature.icon}</div>
-                  <CardTitle className="text-lg">{feature.title}</CardTitle>
+                  <CardTitle className="text-lg dark:text-slate-50">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">{feature.desc}</p>
+                  <p className="text-muted-foreground dark:text-slate-400">{feature.desc}</p>
                 </CardContent>
               </Card>
             ))}
@@ -358,12 +358,12 @@ export default function LandingPage() {
         </p>
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {/* Shopify Option */}
-          <Card>
+          <Card className="dark:bg-slate-900 dark:border-slate-700">
             <CardHeader>
-              <CardTitle>Shopify Store Setup</CardTitle>
-              <CardDescription>Hosted & Managed</CardDescription>
-              <div className="text-3xl font-bold mt-4">$2,500</div>
-              <p className="text-sm text-muted-foreground">One-time setup</p>
+              <CardTitle className="dark:text-slate-50">Shopify Store Setup</CardTitle>
+              <CardDescription className="dark:text-slate-400">Hosted & Managed</CardDescription>
+              <div className="text-3xl font-bold mt-4 dark:text-slate-50">$2,500</div>
+              <p className="text-sm text-muted-foreground dark:text-slate-400">One-time setup</p>
             </CardHeader>
             <CardContent className="space-y-4">
               <ul className="space-y-3">
@@ -377,7 +377,7 @@ export default function LandingPage() {
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
-                    <span className="text-foreground">{item}</span>
+                    <span className="text-foreground dark:text-slate-50">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -390,13 +390,13 @@ export default function LandingPage() {
           </Card>
 
           {/* Headless Option */}
-          <Card className="border-2 border-primary/30">
+          <Card className="border-2 border-primary/30 dark:bg-slate-900 dark:border-blue-700">
             <CardHeader>
-              <Badge className="w-fit mb-2">Recommended</Badge>
-              <CardTitle>Self-Hosted Custom Store</CardTitle>
-              <CardDescription>Next.js / Headless</CardDescription>
-              <div className="text-3xl font-bold mt-4">$4,500</div>
-              <p className="text-sm text-muted-foreground">One-time setup</p>
+              <Badge className="w-fit mb-2 dark:bg-blue-700 dark:text-white">Recommended</Badge>
+              <CardTitle className="dark:text-slate-50">Self-Hosted Custom Store</CardTitle>
+              <CardDescription className="dark:text-slate-400">Next.js / Headless</CardDescription>
+              <div className="text-3xl font-bold mt-4 dark:text-slate-50">$4,500</div>
+              <p className="text-sm text-muted-foreground dark:text-slate-400">One-time setup</p>
             </CardHeader>
             <CardContent className="space-y-4">
               <ul className="space-y-3">
@@ -411,7 +411,7 @@ export default function LandingPage() {
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
-                    <span className="text-foreground">{item}</span>
+                    <span className="text-foreground dark:text-slate-50">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -458,16 +458,16 @@ export default function LandingPage() {
                 rating: 5,
               },
             ].map((testimonial, idx) => (
-              <Card key={idx}>
+              <Card key={idx} className="dark:bg-slate-900 dark:border-slate-700">
                 <CardHeader>
                   <div className="flex gap-1 mb-2">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="h-4 w-4 text-yellow-500 dark:text-yellow-400 fill-yellow-500 dark:fill-yellow-400" />
                     ))}
                   </div>
-                  <p className="text-foreground italic mb-4">"{testimonial.quote}"</p>
-                  <CardTitle className="text-base">{testimonial.author}</CardTitle>
-                  <CardDescription>{testimonial.company}</CardDescription>
+                  <p className="text-foreground dark:text-slate-50 italic mb-4">"{testimonial.quote}"</p>
+                  <CardTitle className="text-base dark:text-slate-50">{testimonial.author}</CardTitle>
+                  <CardDescription className="dark:text-slate-400">{testimonial.company}</CardDescription>
                 </CardHeader>
               </Card>
             ))}

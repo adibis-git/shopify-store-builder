@@ -13,14 +13,14 @@ export default function LoginPage() {
       <div className="mb-8 text-center">
         <div className="flex items-center justify-center gap-2 mb-4">
           <div className="h-10 w-10 rounded-lg bg-blue-600 flex items-center justify-center">
-            <ShoppingCart className="h-6 w-6 text-white dark:text-white" />
+            <ShoppingCart className="h-6 w-6 text-white" />
           </div>
-          <span className="text-2xl font-bold text-foreground">StoreBuilder</span>
+          <span className="text-2xl font-bold text-foreground dark:text-slate-50">StoreBuilder</span>
         </div>
-        <h1 className="text-3xl font-bold text-foreground mb-2">
+        <h1 className="text-3xl font-bold text-foreground dark:text-slate-50 mb-2">
           Welcome Back
         </h1>
-        <p className="text-muted-foreground">
+        <p className="text-muted-foreground dark:text-slate-400">
           Sign in to continue learning
         </p>
       </div>
@@ -29,10 +29,10 @@ export default function LoginPage() {
       <LoginForm />
 
       {/* Footer */}
-      <div className="mt-8 text-center text-sm text-muted-foreground">
+      <div className="mt-8 text-center text-sm text-muted-foreground dark:text-slate-400">
         <p>
           Need help?{' '}
-          <a href="#" className="text-primary hover:underline">
+          <a href="#" className="text-primary hover:underline dark:text-blue-400">
             Contact Support
           </a>
         </p>

@@ -18,10 +18,10 @@ export default function DashboardLayout({
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
+      <div className="min-h-screen bg-background dark:bg-slate-950 flex items-center justify-center">
         <div className="text-center">
           <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
-          <p className="mt-4 text-muted-foreground">Loading...</p>
+          <p className="mt-4 text-muted-foreground dark:text-slate-400">Loading...</p>
         </div>
       </div>
     )
@@ -39,31 +39,31 @@ export default function DashboardLayout({
   return (
     <div className="min-h-screen bg-background dark:bg-slate-950">
       {/* Header */}
-      <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur dark:bg-slate-950/95">
+      <header className="sticky top-0 z-40 border-b border-border dark:border-slate-800 bg-background/95 dark:bg-slate-950/95 backdrop-blur">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="h-8 w-8 rounded-lg bg-blue-600 flex items-center justify-center">
-              <ShoppingCart className="h-5 w-5 text-white dark:text-white" />
+              <ShoppingCart className="h-5 w-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-foreground">StoreBuilder</span>
+            <span className="text-xl font-bold text-foreground dark:text-slate-50">StoreBuilder</span>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <a href="/dashboard" className="text-sm text-muted-foreground hover:text-foreground">
+            <a href="/dashboard" className="text-sm text-muted-foreground dark:text-slate-400 hover:text-foreground dark:hover:text-slate-200">
               Dashboard
             </a>
-            <a href="/courses" className="text-sm text-muted-foreground hover:text-foreground">
+            <a href="/courses" className="text-sm text-muted-foreground dark:text-slate-400 hover:text-foreground dark:hover:text-slate-200">
               Courses
             </a>
-            <a href="/dashboard/profile" className="text-sm text-muted-foreground hover:text-foreground">
+            <a href="/dashboard/profile" className="text-sm text-muted-foreground dark:text-slate-400 hover:text-foreground dark:hover:text-slate-200">
               Profile
             </a>
           </nav>
 
           {/* User Menu */}
           <div className="flex items-center space-x-4">
-            <div className="hidden md:flex items-center space-x-2 text-sm text-muted-foreground">
+            <div className="hidden md:flex items-center space-x-2 text-sm text-muted-foreground dark:text-slate-400">
               <User className="h-4 w-4" />
               <span>{user.email}</span>
             </div>
@@ -80,7 +80,7 @@ export default function DashboardLayout({
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 hover:bg-accent rounded-lg"
+              className="md:hidden p-2 hover:bg-accent dark:hover:bg-slate-800 rounded-lg"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <Menu className="h-5 w-5" />
@@ -90,28 +90,28 @@ export default function DashboardLayout({
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-border bg-background dark:bg-slate-950">
+          <div className="md:hidden border-t border-border dark:border-slate-800 bg-background dark:bg-slate-950">
             <nav className="container mx-auto px-4 py-4 space-y-3">
               <a
                 href="/dashboard"
-                className="block text-sm text-muted-foreground hover:text-foreground py-2"
+                className="block text-sm text-muted-foreground dark:text-slate-400 hover:text-foreground dark:hover:text-slate-200 py-2"
               >
                 Dashboard
               </a>
               <a
                 href="/courses"
-                className="block text-sm text-muted-foreground hover:text-foreground py-2"
+                className="block text-sm text-muted-foreground dark:text-slate-400 hover:text-foreground dark:hover:text-slate-200 py-2"
               >
                 Courses
               </a>
               <a
                 href="/dashboard/profile"
-                className="block text-sm text-muted-foreground hover:text-foreground py-2"
+                className="block text-sm text-muted-foreground dark:text-slate-400 hover:text-foreground dark:hover:text-slate-200 py-2"
               >
                 Profile
               </a>
               <div className="pt-2 border-t border-border dark:border-slate-800">
-                <p className="text-xs text-muted-foreground mb-2">{user.email}</p>
+                <p className="text-xs text-muted-foreground dark:text-slate-400 mb-2">{user.email}</p>
               </div>
             </nav>
           </div>

@@ -15,22 +15,22 @@ export default function VerifyEmailPage() {
       <div className="mb-8 text-center">
         <div className="flex items-center justify-center gap-2 mb-4">
           <div className="h-10 w-10 rounded-lg bg-blue-600 flex items-center justify-center">
-            <ShoppingCart className="h-6 w-6 text-white dark:text-white" />
+            <ShoppingCart className="h-6 w-6 text-white" />
           </div>
-          <span className="text-2xl font-bold text-foreground">StoreBuilder</span>
+          <span className="text-2xl font-bold text-foreground dark:text-slate-50">StoreBuilder</span>
         </div>
       </div>
 
       {/* Verification Card */}
-      <Card className="w-full max-w-md">
+      <Card className="w-full max-w-md dark:bg-slate-900 dark:border-slate-700">
         <CardHeader className="space-y-2 text-center">
           <div className="flex justify-center mb-4">
             <div className="h-16 w-16 rounded-full bg-green-100 dark:bg-green-950 flex items-center justify-center">
               <Mail className="h-8 w-8 text-green-600 dark:text-green-400" />
             </div>
           </div>
-          <CardTitle className="text-2xl">Verify Your Email</CardTitle>
-          <CardDescription>
+          <CardTitle className="text-2xl dark:text-slate-50">Verify Your Email</CardTitle>
+          <CardDescription className="dark:text-slate-400">
             We've sent a verification link to <br />
             <span className="font-semibold text-foreground dark:text-slate-100">{email}</span>
           </CardDescription>
@@ -39,18 +39,18 @@ export default function VerifyEmailPage() {
           {/* Instructions */}
           <div className="space-y-4">
             <div className="space-y-2">
-              <h3 className="font-semibold text-foreground">What's next?</h3>
-              <ol className="space-y-2 text-sm text-muted-foreground">
+              <h3 className="font-semibold text-foreground dark:text-slate-50">What's next?</h3>
+              <ol className="space-y-2 text-sm text-muted-foreground dark:text-slate-400">
                 <li className="flex gap-3">
-                  <span className="flex-shrink-0 font-semibold text-primary">1.</span>
+                  <span className="flex-shrink-0 font-semibold text-primary dark:text-blue-400">1.</span>
                   <span>Check your email inbox (and spam folder)</span>
                 </li>
                 <li className="flex gap-3">
-                  <span className="flex-shrink-0 font-semibold text-primary">2.</span>
+                  <span className="flex-shrink-0 font-semibold text-primary dark:text-blue-400">2.</span>
                   <span>Click the verification link in the email</span>
                 </li>
                 <li className="flex gap-3">
-                  <span className="flex-shrink-0 font-semibold text-primary">3.</span>
+                  <span className="flex-shrink-0 font-semibold text-primary dark:text-blue-400">3.</span>
                   <span>You'll be redirected to sign in</span>
                 </li>
               </ol>
@@ -75,10 +75,10 @@ export default function VerifyEmailPage() {
           </div>
 
           {/* Help Text */}
-          <div className="text-center text-sm text-muted-foreground">
+          <div className="text-center text-sm text-muted-foreground dark:text-slate-400">
             <p>
               Didn't receive the email?{' '}
-              <a href="#" className="text-primary hover:underline">
+              <a href="#" className="text-primary hover:underline dark:text-blue-400">
                 Contact Support
               </a>
             </p>
