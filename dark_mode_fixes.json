@@ -1,0 +1,440 @@
+{
+  "app/page.tsx": [
+    {
+      "line": 69,
+      "old": "bg-slate-95",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 69,
+      "old": "text-slate-50",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 71,
+      "old": "bg-slate-950",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 74,
+      "old": "bg-blue-600",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 75,
+      "old": "text-white",
+      "new": "text-white dark:text-white",
+      "type": "direct_replacement"
+    },
+    {
+      "line": 143,
+      "old": "bg-red-5",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 143,
+      "old": "bg-red-950",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 550,
+      "old": "bg-slate-950",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 564,
+      "old": "bg-slate-90",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 564,
+      "old": "bg-slate-950",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 564,
+      "old": "text-slate-40",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 564,
+      "old": "text-slate-500",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 569,
+      "old": "bg-blue-600",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 570,
+      "old": "text-white",
+      "new": "text-white dark:text-white",
+      "type": "direct_replacement"
+    },
+    {
+      "line": 572,
+      "old": "text-white",
+      "new": "text-white dark:text-white",
+      "type": "direct_replacement"
+    },
+    {
+      "line": 600,
+      "old": "border-slate-800",
+      "new": null,
+      "type": "needs_manual_review"
+    }
+  ],
+  "app/(auth)/signup/page.tsx": [
+    {
+      "line": 11,
+      "old": "bg-slate-950",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 15,
+      "old": "bg-blue-600",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 16,
+      "old": "text-white",
+      "new": "text-white dark:text-white",
+      "type": "direct_replacement"
+    }
+  ],
+  "app/(auth)/verify-email/page.tsx": [
+    {
+      "line": 13,
+      "old": "bg-slate-950",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 17,
+      "old": "bg-blue-600",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 18,
+      "old": "text-white",
+      "new": "text-white dark:text-white",
+      "type": "direct_replacement"
+    },
+    {
+      "line": 28,
+      "old": "bg-green-10",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 28,
+      "old": "bg-green-950",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 35,
+      "old": "text-slate-100",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 60,
+      "old": "bg-blue-5",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 60,
+      "old": "bg-blue-950",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 60,
+      "old": "border-blue-20",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 60,
+      "old": "border-blue-800",
+      "new": null,
+      "type": "needs_manual_review"
+    }
+  ],
+  "app/(auth)/login/page.tsx": [
+    {
+      "line": 11,
+      "old": "bg-slate-950",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 15,
+      "old": "bg-blue-600",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 16,
+      "old": "text-white",
+      "new": "text-white dark:text-white",
+      "type": "direct_replacement"
+    }
+  ],
+  "app/(dashboard)/layout.tsx": [
+    {
+      "line": 42,
+      "old": "bg-slate-950",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 45,
+      "old": "bg-blue-600",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 46,
+      "old": "text-white",
+      "new": "text-white dark:text-white",
+      "type": "direct_replacement"
+    },
+    {
+      "line": 93,
+      "old": "bg-slate-950",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 113,
+      "old": "border-slate-800",
+      "new": null,
+      "type": "needs_manual_review"
+    }
+  ],
+  "app/(dashboard)/dashboard/page.tsx": [
+    {
+      "line": 90,
+      "old": "text-slate-600",
+      "new": "text-slate-600 dark:text-slate-400",
+      "type": "direct_replacement"
+    },
+    {
+      "line": 109,
+      "old": "text-slate-600",
+      "new": "text-slate-600 dark:text-slate-400",
+      "type": "direct_replacement"
+    }
+  ],
+  "components/ui/card.tsx": [
+    {
+      "line": 12,
+      "old": "bg-slate-950",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 12,
+      "old": "text-slate-95",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 12,
+      "old": "text-slate-50",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 12,
+      "old": "border-slate-20",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 12,
+      "old": "border-slate-800",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 53,
+      "old": "text-slate-500",
+      "new": null,
+      "type": "needs_manual_review"
+    }
+  ],
+  "components/ui/dialog.tsx": [
+    {
+      "line": 39,
+      "old": "bg-slate-950",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 39,
+      "old": "border-slate-20",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 39,
+      "old": "border-slate-800",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 103,
+      "old": "text-slate-500",
+      "new": null,
+      "type": "needs_manual_review"
+    }
+  ],
+  "components/ui/textarea.tsx": [
+    {
+      "line": 14,
+      "old": "bg-slate-950",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 14,
+      "old": "text-slate-95",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 14,
+      "old": "text-slate-50",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 14,
+      "old": "text-slate-50",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 14,
+      "old": "text-slate-400",
+      "new": "text-slate-400 dark:text-slate-600",
+      "type": "direct_replacement"
+    },
+    {
+      "line": 14,
+      "old": "border-slate-20",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 14,
+      "old": "border-slate-800",
+      "new": null,
+      "type": "needs_manual_review"
+    }
+  ],
+  "components/ui/input.tsx": [
+    {
+      "line": 13,
+      "old": "bg-slate-950",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 13,
+      "old": "text-slate-95",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 13,
+      "old": "text-slate-50",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 13,
+      "old": "text-slate-50",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 13,
+      "old": "text-slate-400",
+      "new": "text-slate-400 dark:text-slate-600",
+      "type": "direct_replacement"
+    },
+    {
+      "line": 13,
+      "old": "border-slate-20",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 13,
+      "old": "border-slate-800",
+      "new": null,
+      "type": "needs_manual_review"
+    }
+  ],
+  "components/auth/LoginForm.tsx": [
+    {
+      "line": 110,
+      "old": "bg-red-5",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 110,
+      "old": "bg-red-950",
+      "new": null,
+      "type": "needs_manual_review"
+    }
+  ],
+  "components/auth/SignupForm.tsx": [
+    {
+      "line": 157,
+      "old": "bg-red-5",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 157,
+      "old": "bg-red-950",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 165,
+      "old": "bg-green-5",
+      "new": null,
+      "type": "needs_manual_review"
+    },
+    {
+      "line": 165,
+      "old": "bg-green-950",
+      "new": null,
+      "type": "needs_manual_review"
+    }
+  ]
+}

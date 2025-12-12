@@ -7,13 +7,14 @@ import { Moon, Sun } from 'lucide-react'
 
 export function ThemeToggle() {
   const [mounted, setMounted] = useState(false)
-  const { theme, toggleTheme } = useTheme()
+  const { theme, toggleTheme, mounted: contextMounted } = useTheme()
 
   useEffect(() => {
     setMounted(true)
   }, [])
 
-  if (!mounted) {
+  // Wait for both component mount and context to be ready
+  if (!mounted || !contextMounted) {
     return (
       <Button
         variant="ghost"

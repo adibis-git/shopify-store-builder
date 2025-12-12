@@ -66,13 +66,13 @@ export default function LandingPage() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-background text-foreground">
+    <div className="flex flex-col min-h-screen bg-background text-foreground dark:bg-slate-950 dark:text-slate-50">
       {/* Header */}
-      <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
+      <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur dark:bg-slate-950/95">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="h-8 w-8 rounded-lg bg-blue-600 flex items-center justify-center">
-              <ShoppingCart className="h-5 w-5 text-white" />
+              <ShoppingCart className="h-5 w-5 text-white dark:text-white dark:text-white dark:text-white" />
             </div>
             <span className="text-xl font-bold text-foreground">StoreBuilder</span>
           </div>
@@ -140,7 +140,7 @@ export default function LandingPage() {
                     />
                   </div>
                   {error && (
-                    <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded">
+                    <div className="bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800/50 text-red-700 dark:text-red-400 px-4 py-3 rounded">
                       {error}
                     </div>
                   )}
@@ -177,11 +177,11 @@ export default function LandingPage() {
         </div>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
-            <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
+            <Star className="h-4 w-4 text-yellow-500 dark:text-yellow-400 fill-yellow-500 dark:fill-yellow-400" />
             <span>Trusted by 100+ brands</span>
           </div>
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="h-4 w-4 text-green-600" />
+            <CheckCircle2 className="h-4 w-4 text-green-600 dark:text-green-400" />
             <span>Average 40% conversion increase</span>
           </div>
         </div>
@@ -201,19 +201,19 @@ export default function LandingPage() {
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="flex gap-3">
-                  <div className="text-red-600 font-bold">•</div>
+                  <div className="text-red-600 dark:text-red-400 font-bold">•</div>
                   <p className="text-muted-foreground">Low conversion rates despite traffic</p>
                 </div>
                 <div className="flex gap-3">
-                  <div className="text-red-600 font-bold">•</div>
+                  <div className="text-red-600 dark:text-red-400 font-bold">•</div>
                   <p className="text-muted-foreground">Poor mobile experience losing sales</p>
                 </div>
                 <div className="flex gap-3">
-                  <div className="text-red-600 font-bold">•</div>
+                  <div className="text-red-600 dark:text-red-400 font-bold">•</div>
                   <p className="text-muted-foreground">Confusing checkout flow</p>
                 </div>
                 <div className="flex gap-3">
-                  <div className="text-red-600 font-bold">•</div>
+                  <div className="text-red-600 dark:text-red-400 font-bold">•</div>
                   <p className="text-muted-foreground">Generic design that doesn't stand out</p>
                 </div>
               </CardContent>
@@ -241,19 +241,19 @@ export default function LandingPage() {
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="flex gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 className="h-5 w-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
                   <p className="text-muted-foreground">Sales psychology-driven design</p>
                 </div>
                 <div className="flex gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 className="h-5 w-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
                   <p className="text-muted-foreground">Optimized checkout & trust signals</p>
                 </div>
                 <div className="flex gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 className="h-5 w-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
                   <p className="text-muted-foreground">Mobile-first, conversion-focused</p>
                 </div>
                 <div className="flex gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 className="h-5 w-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
                   <p className="text-muted-foreground">Measurable results & ongoing optimization</p>
                 </div>
               </CardContent>
@@ -285,7 +285,7 @@ export default function LandingPage() {
                 <CardDescription>Conversion Rate: {store.conversion}</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold text-green-600 mb-4">{store.increase}</div>
+                <div className="text-2xl font-bold text-green-600 dark:text-green-400 mb-4">{store.increase}</div>
                 <Button variant="outline" className="w-full">
                   See Full Store <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -304,32 +304,32 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: <Zap className="h-6 w-6 text-blue-600" />,
+                icon: <Zap className="h-6 w-6 text-blue-600 dark:text-blue-400" />,
                 title: 'Mobile-First Design',
                 desc: '60% of sales come from mobile. We design for phones first.',
               },
               {
-                icon: <ShoppingCart className="h-6 w-6 text-blue-600" />,
+                icon: <ShoppingCart className="h-6 w-6 text-blue-600 dark:text-blue-400" />,
                 title: 'Optimized Checkout Flow',
                 desc: 'Reduce cart abandonment with a streamlined, trust-building checkout.',
               },
               {
-                icon: <TrendingUp className="h-6 w-6 text-blue-600" />,
+                icon: <TrendingUp className="h-6 w-6 text-blue-600 dark:text-blue-400" />,
                 title: 'Sales-Focused Layouts',
                 desc: 'Every section is designed to guide customers toward purchase.',
               },
               {
-                icon: <Brain className="h-6 w-6 text-blue-600" />,
+                icon: <Brain className="h-6 w-6 text-blue-600 dark:text-blue-400" />,
                 title: 'Buyer Psychology',
                 desc: 'Leverage scarcity, social proof, and urgency to drive conversions.',
               },
               {
-                icon: <Zap className="h-6 w-6 text-blue-600" />,
+                icon: <Zap className="h-6 w-6 text-blue-600 dark:text-blue-400" />,
                 title: 'Shopify & Headless Support',
                 desc: 'Built on Shopify or custom Next.js—your choice.',
               },
               {
-                icon: <Users className="h-6 w-6 text-blue-600" />,
+                icon: <Users className="h-6 w-6 text-blue-600 dark:text-blue-400" />,
                 title: 'Expert Setup & Guidance',
                 desc: 'We handle setup, training, and ongoing optimization.',
               },
@@ -376,7 +376,7 @@ export default function LandingPage() {
                   '30 days of support',
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="h-5 w-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
                     <span className="text-foreground">{item}</span>
                   </li>
                 ))}
@@ -410,7 +410,7 @@ export default function LandingPage() {
                   'Unlimited customization',
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="h-5 w-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
                     <span className="text-foreground">{item}</span>
                   </li>
                 ))}
@@ -462,7 +462,7 @@ export default function LandingPage() {
                 <CardHeader>
                   <div className="flex gap-1 mb-2">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 text-yellow-500 fill-yellow-500" />
+                      <Star key={i} className="h-4 w-4 text-yellow-500 dark:text-yellow-400 fill-yellow-500 dark:fill-yellow-400" />
                     ))}
                   </div>
                   <p className="text-foreground italic mb-4">"{testimonial.quote}"</p>
@@ -547,7 +547,7 @@ export default function LandingPage() {
       </section>
 
       {/* Mobile Sticky CTA */}
-      <div className="fixed bottom-0 left-0 right-0 md:hidden bg-white border-t border-slate-200 p-4 shadow-lg">
+      <div className="fixed bottom-0 left-0 right-0 md:hidden bg-background border-t border-border p-4 shadow-lg dark:bg-slate-950">
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
           <DialogTrigger asChild>
             <Button className="w-full" size="lg">
@@ -561,44 +561,44 @@ export default function LandingPage() {
       <div className="md:hidden h-20" />
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-slate-400 py-12 mt-20">
+      <footer className="bg-slate-900 dark:bg-slate-950 text-slate-400 dark:text-slate-500 py-12 mt-20">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <div className="h-8 w-8 rounded-lg bg-blue-600 flex items-center justify-center">
-                  <ShoppingCart className="h-5 w-5 text-white" />
+                  <ShoppingCart className="h-5 w-5 text-white dark:text-white dark:text-white dark:text-white" />
                 </div>
-                <span className="text-lg font-bold text-white">StoreBuilder</span>
+                <span className="text-lg font-bold text-white dark:text-white dark:text-white dark:text-white dark:text-white">StoreBuilder</span>
               </div>
-              <p className="text-sm">Building conversion-focused ecommerce stores.</p>
+              <p className="text-sm text-muted-foreground">Building conversion-focused ecommerce stores.</p>
             </div>
             <div>
-              <h4 className="font-semibold text-white mb-4">Product</h4>
+              <h4 className="font-semibold text-primary-foreground mb-4">Product</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white">Features</a></li>
-                <li><a href="#pricing" className="hover:text-white">Pricing</a></li>
-                <li><a href="#faq" className="hover:text-white">FAQ</a></li>
+                <li><a href="#" className="hover:text-primary-foreground/90">Features</a></li>
+                <li><a href="#" className="hover:text-primary-foreground/90">Pricing</a></li>
+                <li><a href="#" className="hover:text-primary-foreground/90">FAQ</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-white mb-4">Company</h4>
+              <h4 className="font-semibold text-primary-foreground mb-4">Company</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white">About</a></li>
-                <li><a href="#" className="hover:text-white">Blog</a></li>
-                <li><a href="#" className="hover:text-white">Contact</a></li>
+                <li><a href="#" className="hover:text-muted-foreground">About</a></li>
+                <li><a href="#" className="hover:text-muted-foreground">Blog</a></li>
+                <li><a href="#" className="hover:text-muted-foreground">Contact</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-white mb-4">Legal</h4>
+              <h4 className="font-semibold text-primary-foreground mb-4">Legal</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white">Privacy</a></li>
-                <li><a href="#" className="hover:text-white">Terms</a></li>
+                <li><a href="#" className="hover:text-muted-foreground">Privacy</a></li>
+                <li><a href="#" className="hover:text-muted-foreground">Terms</a></li>
               </ul>
             </div>
           </div>
           <div className="border-t border-slate-800 pt-8 text-center text-sm">
-            <p>&copy; 2025 StoreBuilder. All rights reserved.</p>
+            <p className="text-muted-foreground">&copy; 2025 StoreBuilder. All rights reserved.</p>
           </div>
         </div>
       </footer>

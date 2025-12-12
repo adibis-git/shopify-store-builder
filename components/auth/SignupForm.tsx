@@ -154,7 +154,7 @@ export function SignupForm() {
 
           {/* Error Message */}
           {error && (
-            <div className="flex gap-2 rounded-lg bg-red-50 p-3 text-sm text-red-700 border border-red-200">
+            <div className="flex gap-2 rounded-lg bg-red-50 dark:bg-red-950/30 p-3 text-sm text-red-700 dark:text-red-400 border border-red-200 dark:border-red-800/50">
               <AlertCircle className="h-4 w-4 flex-shrink-0 mt-0.5" />
               <span>{error}</span>
             </div>
@@ -162,7 +162,7 @@ export function SignupForm() {
 
           {/* Success Message */}
           {success && (
-            <div className="flex gap-2 rounded-lg bg-green-50 p-3 text-sm text-green-700 border border-green-200">
+            <div className="flex gap-2 rounded-lg bg-green-50 dark:bg-green-950/30 p-3 text-sm text-green-700 dark:text-green-400 border border-green-200 dark:border-green-800/50">
               <CheckCircle2 className="h-4 w-4 flex-shrink-0 mt-0.5" />
               <span>Account created! Redirecting to email verification...</span>
             </div>

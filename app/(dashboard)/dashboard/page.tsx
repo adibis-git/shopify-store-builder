@@ -25,7 +25,7 @@ export default function DashboardPage() {
         <Card>
           <CardHeader className="pb-3">
             <CardTitle className="text-sm font-medium flex items-center gap-2">
-              <BookOpen className="h-4 w-4 text-blue-600" />
+              <BookOpen className="h-4 w-4 text-blue-600 dark:text-blue-400" />
               Courses Enrolled
             </CardTitle>
           </CardHeader>
@@ -38,7 +38,7 @@ export default function DashboardPage() {
         <Card>
           <CardHeader className="pb-3">
             <CardTitle className="text-sm font-medium flex items-center gap-2">
-              <TrendingUp className="h-4 w-4 text-green-600" />
+              <TrendingUp className="h-4 w-4 text-green-600 dark:text-green-400" />
               Progress
             </CardTitle>
           </CardHeader>
@@ -51,7 +51,7 @@ export default function DashboardPage() {
         <Card>
           <CardHeader className="pb-3">
             <CardTitle className="text-sm font-medium flex items-center gap-2">
-              <Clock className="h-4 w-4 text-orange-600" />
+              <Clock className="h-4 w-4 text-orange-600 dark:text-orange-400" />
               Learning Hours
             </CardTitle>
           </CardHeader>
@@ -64,7 +64,7 @@ export default function DashboardPage() {
         <Card>
           <CardHeader className="pb-3">
             <CardTitle className="text-sm font-medium flex items-center gap-2">
-              <Award className="h-4 w-4 text-purple-600" />
+              <Award className="h-4 w-4 text-purple-600 dark:text-purple-400" />
               Certificates
             </CardTitle>
           </CardHeader>
@@ -87,7 +87,7 @@ export default function DashboardPage() {
         <Card>
           <CardContent className="pt-6">
             <div className="text-center py-12">
-              <BookOpen className="h-12 w-12 text-muted-foreground mx-auto mb-4 opacity-50" />
+              <BookOpen className="h-12 w-12 text-muted-foreground dark:text-slate-600 dark:text-slate-400 mx-auto mb-4 opacity-50" />
               <h3 className="text-lg font-semibold text-foreground mb-2">No courses yet</h3>
               <p className="text-muted-foreground mb-6">
                 Start your learning journey by enrolling in a course
@@ -106,7 +106,7 @@ export default function DashboardPage() {
         <Card>
           <CardContent className="pt-6">
             <div className="text-center py-12">
-              <TrendingUp className="h-12 w-12 text-muted-foreground mx-auto mb-4 opacity-50" />
+              <TrendingUp className="h-12 w-12 text-muted-foreground dark:text-slate-600 dark:text-slate-400 mx-auto mb-4 opacity-50" />
               <h3 className="text-lg font-semibold text-foreground mb-2">Coming soon</h3>
               <p className="text-muted-foreground">
                 Personalized course recommendations will appear here

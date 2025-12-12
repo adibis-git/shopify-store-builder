@@ -10,14 +10,14 @@ export default function VerifyEmailPage() {
   const email = searchParams.get('email') || 'your email'
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-slate-950 dark:to-slate-900 flex flex-col items-center justify-center px-4 py-12">
+    <div className="min-h-screen bg-background dark:bg-slate-950 flex flex-col items-center justify-center px-4 py-12">
       {/* Header */}
       <div className="mb-8 text-center">
         <div className="flex items-center justify-center gap-2 mb-4">
           <div className="h-10 w-10 rounded-lg bg-blue-600 flex items-center justify-center">
-            <ShoppingCart className="h-6 w-6 text-white" />
+            <ShoppingCart className="h-6 w-6 text-white dark:text-white" />
           </div>
-          <span className="text-2xl font-bold text-slate-900 dark:text-white">StoreBuilder</span>
+          <span className="text-2xl font-bold text-foreground">StoreBuilder</span>
         </div>
       </div>
 
@@ -25,22 +25,22 @@ export default function VerifyEmailPage() {
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-2 text-center">
           <div className="flex justify-center mb-4">
-            <div className="h-16 w-16 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center">
+            <div className="h-16 w-16 rounded-full bg-green-100 dark:bg-green-950 flex items-center justify-center">
               <Mail className="h-8 w-8 text-green-600 dark:text-green-400" />
             </div>
           </div>
           <CardTitle className="text-2xl">Verify Your Email</CardTitle>
           <CardDescription>
             We've sent a verification link to <br />
-            <span className="font-semibold text-foreground">{email}</span>
+            <span className="font-semibold text-foreground dark:text-slate-100">{email}</span>
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">
           {/* Instructions */}
           <div className="space-y-4">
             <div className="space-y-2">
-              <h3 className="font-semibold text-slate-900 dark:text-white">What's next?</h3>
-              <ol className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+              <h3 className="font-semibold text-foreground">What's next?</h3>
+              <ol className="space-y-2 text-sm text-muted-foreground">
                 <li className="flex gap-3">
                   <span className="flex-shrink-0 font-semibold text-primary">1.</span>
                   <span>Check your email inbox (and spam folder)</span>
@@ -57,8 +57,8 @@ export default function VerifyEmailPage() {
             </div>
 
             {/* Info Box */}
-            <div className="rounded-lg bg-blue-50 dark:bg-blue-950 p-4 border border-blue-200 dark:border-blue-800">
-              <p className="text-sm text-blue-900 dark:text-blue-200">
+            <div className="rounded-lg bg-blue-50 dark:bg-blue-950/30 p-4 border border-blue-200 dark:border-blue-800/30">
+              <p className="text-sm text-blue-900 dark:text-blue-300">
                 <strong>Tip:</strong> The verification link expires in 24 hours. If it expires, you can request a new one.
               </p>
             </div>
@@ -75,7 +75,7 @@ export default function VerifyEmailPage() {
           </div>
 
           {/* Help Text */}
-          <div className="text-center text-sm text-slate-600 dark:text-slate-400">
+          <div className="text-center text-sm text-muted-foreground">
             <p>
               Didn't receive the email?{' '}
               <a href="#" className="text-primary hover:underline">

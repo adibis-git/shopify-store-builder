@@ -39,11 +39,11 @@ export default function DashboardLayout({
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
+      <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur dark:bg-slate-950/95">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="h-8 w-8 rounded-lg bg-blue-600 flex items-center justify-center">
-              <ShoppingCart className="h-5 w-5 text-white" />
+              <ShoppingCart className="h-5 w-5 text-white dark:text-white" />
             </div>
             <span className="text-xl font-bold text-foreground">StoreBuilder</span>
           </div>
@@ -90,7 +90,7 @@ export default function DashboardLayout({
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-border bg-background">
+          <div className="md:hidden border-t border-border bg-background dark:bg-slate-950">
             <nav className="container mx-auto px-4 py-4 space-y-3">
               <a
                 href="/dashboard"
@@ -110,7 +110,7 @@ export default function DashboardLayout({
               >
                 Profile
               </a>
-              <div className="pt-2 border-t border-border">
+              <div className="pt-2 border-t border-border dark:border-slate-800">
                 <p className="text-xs text-muted-foreground mb-2">{user.email}</p>
               </div>
             </nav>
