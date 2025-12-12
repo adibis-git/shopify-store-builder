@@ -71,10 +71,10 @@ export function SignupForm() {
   }
 
   return (
-    <Card className="w-full max-w-md">
+    <Card className="w-full max-w-md dark:bg-slate-900 dark:border-slate-700">
       <CardHeader className="space-y-2">
-        <CardTitle className="text-2xl">Create Account</CardTitle>
-        <CardDescription>
+        <CardTitle className="text-2xl dark:text-slate-50">Create Account</CardTitle>
+        <CardDescription className="dark:text-slate-400">
           Join our dropshipping community and start learning
         </CardDescription>
       </CardHeader>

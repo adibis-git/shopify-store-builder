@@ -74,12 +74,12 @@ export default function LandingPage() {
             <div className="h-8 w-8 rounded-lg bg-blue-600 flex items-center justify-center">
               <ShoppingCart className="h-5 w-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-foreground">StoreBuilder</span>
+            <span className="text-xl font-bold text-foreground dark:text-slate-50">StoreBuilder</span>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-sm text-muted-foreground hover:text-foreground">Features</a>
-            <a href="#pricing" className="text-sm text-muted-foreground hover:text-foreground">Pricing</a>
-            <a href="#faq" className="text-sm text-muted-foreground hover:text-foreground">FAQ</a>
+            <a href="#features" className="text-sm text-muted-foreground hover:text-foreground dark:text-slate-400 dark:hover:text-slate-50">Features</a>
+            <a href="#pricing" className="text-sm text-muted-foreground hover:text-foreground dark:text-slate-400 dark:hover:text-slate-50">Pricing</a>
+            <a href="#faq" className="text-sm text-muted-foreground hover:text-foreground dark:text-slate-400 dark:hover:text-slate-50">FAQ</a>
             <ThemeToggle />
             <Dialog open={isOpen} onOpenChange={setIsOpen}>
               <DialogTrigger asChild>
@@ -155,12 +155,12 @@ export default function LandingPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20 md:py-32 text-center">
+      <section className="container mx-auto px-4 py-20 md:py-32 text-center bg-background dark:bg-slate-950">
         <Badge className="mb-4 inline-block">Conversion-Focused Design</Badge>
-        <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+        <h1 className="text-4xl md:text-6xl font-bold text-foreground dark:text-slate-50 mb-6 leading-tight">
           Build a High-Converting Shopify Store That Actually Sells
         </h1>
-        <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+        <p className="text-lg md:text-xl text-muted-foreground dark:text-slate-400 mb-8 max-w-3xl mx-auto">
           Custom-built or self-hosted ecommerce stores with conversion-focused design. Done-for-you or done-with-you options.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -175,7 +175,7 @@ export default function LandingPage() {
             See Example Stores <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </div>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-muted-foreground">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-muted-foreground dark:text-slate-400">
           <div className="flex items-center gap-2">
             <Star className="h-4 w-4 text-yellow-500 dark:text-yellow-400 fill-yellow-500 dark:fill-yellow-400" />
             <span>Trusted by 100+ brands</span>
@@ -195,66 +195,66 @@ export default function LandingPage() {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {/* Problems */}
-            <Card>
+            <Card className="dark:bg-slate-800 dark:border-slate-700">
               <CardHeader>
-                <CardTitle className="text-xl">The Problem</CardTitle>
+                <CardTitle className="text-xl dark:text-slate-50">The Problem</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="flex gap-3">
                   <div className="text-red-600 dark:text-red-400 font-bold">•</div>
-                  <p className="text-muted-foreground">Low conversion rates despite traffic</p>
+                  <p className="text-muted-foreground dark:text-slate-400">Low conversion rates despite traffic</p>
                 </div>
                 <div className="flex gap-3">
                   <div className="text-red-600 dark:text-red-400 font-bold">•</div>
-                  <p className="text-muted-foreground">Poor mobile experience losing sales</p>
+                  <p className="text-muted-foreground dark:text-slate-400">Poor mobile experience losing sales</p>
                 </div>
                 <div className="flex gap-3">
                   <div className="text-red-600 dark:text-red-400 font-bold">•</div>
-                  <p className="text-muted-foreground">Confusing checkout flow</p>
+                  <p className="text-muted-foreground dark:text-slate-400">Confusing checkout flow</p>
                 </div>
                 <div className="flex gap-3">
                   <div className="text-red-600 dark:text-red-400 font-bold">•</div>
-                  <p className="text-muted-foreground">Generic design that doesn't stand out</p>
+                  <p className="text-muted-foreground dark:text-slate-400">Generic design that doesn't stand out</p>
                 </div>
               </CardContent>
             </Card>
 
             {/* Agitation */}
-            <Card className="border-2 border-primary/20 bg-primary/5">
+            <Card className="border-2 border-primary/20 bg-primary/5 dark:bg-blue-950/30 dark:border-blue-700/50">
               <CardHeader>
-                <CardTitle className="text-xl">The Reality</CardTitle>
+                <CardTitle className="text-xl dark:text-slate-50">The Reality</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-foreground font-semibold mb-4">
+                <p className="text-foreground dark:text-slate-50 font-semibold mb-4">
                   "You're not bad at ecommerce — your store just isn't built to convert."
                 </p>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground dark:text-slate-400">
                   Most stores are designed to look pretty, not to sell. They ignore buyer psychology, friction points, and the psychology of trust. Every pixel should drive conversions.
                 </p>
               </CardContent>
             </Card>
 
             {/* Solution */}
-            <Card>
+            <Card className="dark:bg-slate-800 dark:border-slate-700">
               <CardHeader>
-                <CardTitle className="text-xl">Our Solution</CardTitle>
+                <CardTitle className="text-xl dark:text-slate-50">Our Solution</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="flex gap-3">
                   <CheckCircle2 className="h-5 w-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
-                  <p className="text-muted-foreground">Sales psychology-driven design</p>
+                  <p className="text-muted-foreground dark:text-slate-400">Sales psychology-driven design</p>
                 </div>
                 <div className="flex gap-3">
                   <CheckCircle2 className="h-5 w-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
-                  <p className="text-muted-foreground">Optimized checkout & trust signals</p>
+                  <p className="text-muted-foreground dark:text-slate-400">Optimized checkout & trust signals</p>
                 </div>
                 <div className="flex gap-3">
                   <CheckCircle2 className="h-5 w-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
-                  <p className="text-muted-foreground">Mobile-first, conversion-focused</p>
+                  <p className="text-muted-foreground dark:text-slate-400">Mobile-first, conversion-focused</p>
                 </div>
                 <div className="flex gap-3">
                   <CheckCircle2 className="h-5 w-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
-                  <p className="text-muted-foreground">Measurable results & ongoing optimization</p>
+                  <p className="text-muted-foreground dark:text-slate-400">Measurable results & ongoing optimization</p>
                 </div>
               </CardContent>
             </Card>
@@ -276,12 +276,12 @@ export default function LandingPage() {
             { name: 'Eco Products', conversion: '2.8%', increase: '+142%', image: '🌿' },
             { name: 'Tech Gadgets', conversion: '4.1%', increase: '+210%', image: '⚡' },
           ].map((store, idx) => (
-            <Card key={idx} className="overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-700 flex items-center justify-center text-6xl">
+            <Card key={idx} className="overflow-hidden hover:shadow-lg transition-shadow dark:bg-slate-800 dark:border-slate-700">
+              <div className="h-48 bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-700 dark:to-slate-600 flex items-center justify-center text-6xl">
                 {store.image}
               </div>
               <CardHeader>
-                <CardTitle>{store.name}</CardTitle>
+                <CardTitle className="dark:text-slate-50">{store.name}</CardTitle>
                 <CardDescription className="dark:text-slate-400">Conversion Rate: {store.conversion}</CardDescription>
               </CardHeader>
               <CardContent>
@@ -334,7 +334,7 @@ export default function LandingPage() {
                 desc: 'We handle setup, training, and ongoing optimization.',
               },
             ].map((feature, idx) => (
-              <Card key={idx} className="dark:bg-slate-900 dark:border-slate-700">
+              <Card key={idx} className="dark:bg-slate-800 dark:border-slate-700">
                 <CardHeader>
                   <div className="mb-2">{feature.icon}</div>
                   <CardTitle className="text-lg dark:text-slate-50">{feature.title}</CardTitle>
@@ -358,7 +358,7 @@ export default function LandingPage() {
         </p>
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {/* Shopify Option */}
-          <Card className="dark:bg-slate-900 dark:border-slate-700">
+          <Card className="dark:bg-slate-800 dark:border-slate-700">
             <CardHeader>
               <CardTitle className="dark:text-slate-50">Shopify Store Setup</CardTitle>
               <CardDescription className="dark:text-slate-400">Hosted & Managed</CardDescription>
@@ -390,7 +390,7 @@ export default function LandingPage() {
           </Card>
 
           {/* Headless Option */}
-          <Card className="border-2 border-primary/30 dark:bg-slate-900 dark:border-blue-700">
+          <Card className="border-2 border-primary/30 dark:bg-slate-800 dark:border-blue-600">
             <CardHeader>
               <Badge className="w-fit mb-2 dark:bg-blue-700 dark:text-white">Recommended</Badge>
               <CardTitle className="dark:text-slate-50">Self-Hosted Custom Store</CardTitle>
@@ -458,7 +458,7 @@ export default function LandingPage() {
                 rating: 5,
               },
             ].map((testimonial, idx) => (
-              <Card key={idx} className="dark:bg-slate-900 dark:border-slate-700">
+              <Card key={idx} className="dark:bg-slate-800 dark:border-slate-700">
                 <CardHeader>
                   <div className="flex gap-1 mb-2">
                     {[...Array(testimonial.rating)].map((_, i) => (

@@ -12,65 +12,65 @@ export default function DashboardPage() {
     <div className="space-y-8">
       {/* Welcome Section */}
       <div>
-        <h1 className="text-3xl font-bold text-foreground mb-2">
+        <h1 className="text-3xl font-bold text-foreground dark:text-slate-50 mb-2">
           Welcome back, {user?.user_metadata?.full_name || 'Learner'}!
         </h1>
-        <p className="text-muted-foreground">
+        <p className="text-muted-foreground dark:text-slate-400">
           Continue your learning journey and master dropshipping
         </p>
       </div>
 
       {/* Stats Grid */}
       <div className="grid md:grid-cols-4 gap-4">
-        <Card>
+        <Card className="dark:bg-slate-900 dark:border-slate-700">
           <CardHeader className="pb-3">
-            <CardTitle className="text-sm font-medium flex items-center gap-2">
+            <CardTitle className="text-sm font-medium flex items-center gap-2 dark:text-slate-50">
               <BookOpen className="h-4 w-4 text-blue-600 dark:text-blue-400" />
               Courses Enrolled
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">0</div>
-            <p className="text-xs text-muted-foreground mt-1">Start learning today</p>
+            <div className="text-2xl font-bold dark:text-slate-50">0</div>
+            <p className="text-xs text-muted-foreground dark:text-slate-400 mt-1">Start learning today</p>
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="dark:bg-slate-900 dark:border-slate-700">
           <CardHeader className="pb-3">
-            <CardTitle className="text-sm font-medium flex items-center gap-2">
+            <CardTitle className="text-sm font-medium flex items-center gap-2 dark:text-slate-50">
               <TrendingUp className="h-4 w-4 text-green-600 dark:text-green-400" />
               Progress
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">0%</div>
-            <p className="text-xs text-muted-foreground mt-1">Overall completion</p>
+            <div className="text-2xl font-bold dark:text-slate-50">0%</div>
+            <p className="text-xs text-muted-foreground dark:text-slate-400 mt-1">Overall completion</p>
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="dark:bg-slate-900 dark:border-slate-700">
           <CardHeader className="pb-3">
-            <CardTitle className="text-sm font-medium flex items-center gap-2">
+            <CardTitle className="text-sm font-medium flex items-center gap-2 dark:text-slate-50">
               <Clock className="h-4 w-4 text-orange-600 dark:text-orange-400" />
               Learning Hours
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">0h</div>
-            <p className="text-xs text-muted-foreground mt-1">Total time spent</p>
+            <div className="text-2xl font-bold dark:text-slate-50">0h</div>
+            <p className="text-xs text-muted-foreground dark:text-slate-400 mt-1">Total time spent</p>
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="dark:bg-slate-900 dark:border-slate-700">
           <CardHeader className="pb-3">
-            <CardTitle className="text-sm font-medium flex items-center gap-2">
+            <CardTitle className="text-sm font-medium flex items-center gap-2 dark:text-slate-50">
               <Award className="h-4 w-4 text-purple-600 dark:text-purple-400" />
               Certificates
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">0</div>
-            <p className="text-xs text-muted-foreground mt-1">Earned certificates</p>
+            <div className="text-2xl font-bold dark:text-slate-50">0</div>
+            <p className="text-xs text-muted-foreground dark:text-slate-400 mt-1">Earned certificates</p>
           </CardContent>
         </Card>
       </div>
@@ -78,18 +78,18 @@ export default function DashboardPage() {
       {/* Enrolled Courses Section */}
       <div>
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-2xl font-bold text-foreground">Your Courses</h2>
+          <h2 className="text-2xl font-bold text-foreground dark:text-slate-50">Your Courses</h2>
           <Button asChild>
             <a href="/courses">Browse Courses</a>
           </Button>
         </div>
 
-        <Card>
+        <Card className="dark:bg-slate-900 dark:border-slate-700">
           <CardContent className="pt-6">
             <div className="text-center py-12">
-              <BookOpen className="h-12 w-12 text-muted-foreground dark:text-slate-600 dark:text-slate-400 mx-auto mb-4 opacity-50" />
-              <h3 className="text-lg font-semibold text-foreground mb-2">No courses yet</h3>
-              <p className="text-muted-foreground mb-6">
+              <BookOpen className="h-12 w-12 text-muted-foreground dark:text-slate-400 mx-auto mb-4 opacity-50" />
+              <h3 className="text-lg font-semibold text-foreground dark:text-slate-50 mb-2">No courses yet</h3>
+              <p className="text-muted-foreground dark:text-slate-400 mb-6">
                 Start your learning journey by enrolling in a course
               </p>
               <Button asChild>
@@ -102,13 +102,13 @@ export default function DashboardPage() {
 
       {/* Recommended Courses Section */}
       <div>
-        <h2 className="text-2xl font-bold text-foreground mb-4">Recommended For You</h2>
-        <Card>
+        <h2 className="text-2xl font-bold text-foreground dark:text-slate-50 mb-4">Recommended For You</h2>
+        <Card className="dark:bg-slate-900 dark:border-slate-700">
           <CardContent className="pt-6">
             <div className="text-center py-12">
-              <TrendingUp className="h-12 w-12 text-muted-foreground dark:text-slate-600 dark:text-slate-400 mx-auto mb-4 opacity-50" />
-              <h3 className="text-lg font-semibold text-foreground mb-2">Coming soon</h3>
-              <p className="text-muted-foreground">
+              <TrendingUp className="h-12 w-12 text-muted-foreground dark:text-slate-400 mx-auto mb-4 opacity-50" />
+              <h3 className="text-lg font-semibold text-foreground dark:text-slate-50 mb-2">Coming soon</h3>
+              <p className="text-muted-foreground dark:text-slate-400">
                 Personalized course recommendations will appear here
               </p>
             </div>
