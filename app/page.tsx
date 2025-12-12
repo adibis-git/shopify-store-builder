@@ -72,7 +72,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="h-8 w-8 rounded-lg bg-blue-600 flex items-center justify-center">
-              <ShoppingCart className="h-5 w-5 text-white dark:text-white dark:text-white dark:text-white" />
+              <ShoppingCart className="h-5 w-5 text-white" />
             </div>
             <span className="text-xl font-bold text-foreground">StoreBuilder</span>
           </div>
@@ -567,9 +567,9 @@ export default function LandingPage() {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <div className="h-8 w-8 rounded-lg bg-blue-600 flex items-center justify-center">
-                  <ShoppingCart className="h-5 w-5 text-white dark:text-white dark:text-white dark:text-white" />
+                  <ShoppingCart className="h-5 w-5 text-white" />
                 </div>
-                <span className="text-lg font-bold text-white dark:text-white dark:text-white dark:text-white dark:text-white">StoreBuilder</span>
+                <span className="text-lg font-bold text-white">StoreBuilder</span>
               </div>
               <p className="text-sm text-muted-foreground">Building conversion-focused ecommerce stores.</p>
             </div>
