@@ -188,9 +188,9 @@ export default function LandingPage() {
       </section>
 
       {/* Problem-Agitate-Solution Section */}
-      <section className="bg-muted py-20">
+      <section className="bg-muted dark:bg-slate-900 py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground dark:text-slate-50 text-center mb-16">
             Your Store Isn't Broken—It's Just Not Built to Convert
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -296,9 +296,9 @@ export default function LandingPage() {
       </section>
 
       {/* Key Features & Benefits */}
-      <section id="features" className="bg-muted py-20">
+      <section id="features" className="bg-muted dark:bg-slate-900 py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground dark:text-slate-50 text-center mb-16">
             Built for Conversion
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -349,11 +349,11 @@ export default function LandingPage() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="container mx-auto px-4 py-20">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-4">
+      <section id="pricing" className="container mx-auto px-4 py-20 bg-background dark:bg-slate-950">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground dark:text-slate-50 text-center mb-4">
           Two Ways to Build Your Store
         </h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-muted-foreground dark:text-slate-400 mb-12 max-w-2xl mx-auto">
           Choose the option that works best for your business.
         </p>
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -426,9 +426,9 @@ export default function LandingPage() {
       </section>
 
       {/* Social Proof Section */}
-      <section className="bg-muted py-20">
+      <section className="bg-muted dark:bg-slate-900 py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground dark:text-slate-50 text-center mb-16">
             Trusted by Growing Brands
           </h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -476,8 +476,8 @@ export default function LandingPage() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="container mx-auto px-4 py-20">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-12">
+      <section id="faq" className="container mx-auto px-4 py-20 bg-background dark:bg-slate-950">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground dark:text-slate-50 text-center mb-12">
           Frequently Asked Questions
         </h2>
         <div className="max-w-3xl mx-auto">
@@ -528,12 +528,12 @@ export default function LandingPage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="bg-primary py-20">
+      <section className="bg-primary dark:bg-blue-900 py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground dark:text-white mb-6">
             Let's Build Your Store the Right Way
           </h2>
-          <p className="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-primary-foreground dark:text-blue-100 mb-8 max-w-2xl mx-auto">
             Get a free audit of your store and a personalized roadmap to increase conversions.
           </p>
           <Dialog open={isOpen} onOpenChange={setIsOpen}>
@@ -547,7 +547,7 @@ export default function LandingPage() {
       </section>
 
       {/* Mobile Sticky CTA */}
-      <div className="fixed bottom-0 left-0 right-0 md:hidden bg-background border-t border-border p-4 shadow-lg dark:bg-slate-950">
+      <div className="fixed bottom-0 left-0 right-0 md:hidden bg-background dark:bg-slate-950 border-t border-border dark:border-slate-800 p-4 shadow-lg">
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
           <DialogTrigger asChild>
             <Button className="w-full" size="lg">
@@ -561,7 +561,7 @@ export default function LandingPage() {
       <div className="md:hidden h-20" />
 
       {/* Footer */}
-      <footer className="bg-slate-900 dark:bg-slate-950 text-slate-400 dark:text-slate-500 py-12 mt-20">
+      <footer className="bg-slate-900 dark:bg-slate-950 text-slate-400 dark:text-slate-300 py-12 mt-20">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
@@ -569,36 +569,36 @@ export default function LandingPage() {
                 <div className="h-8 w-8 rounded-lg bg-blue-600 flex items-center justify-center">
                   <ShoppingCart className="h-5 w-5 text-white" />
                 </div>
-                <span className="text-lg font-bold text-white">StoreBuilder</span>
+                <span className="text-lg font-bold text-white dark:text-white">StoreBuilder</span>
               </div>
-              <p className="text-sm text-muted-foreground">Building conversion-focused ecommerce stores.</p>
+              <p className="text-sm text-slate-400 dark:text-slate-400">Building conversion-focused ecommerce stores.</p>
             </div>
             <div>
-              <h4 className="font-semibold text-primary-foreground mb-4">Product</h4>
+              <h4 className="font-semibold text-white dark:text-slate-200 mb-4">Product</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-primary-foreground/90">Features</a></li>
-                <li><a href="#" className="hover:text-primary-foreground/90">Pricing</a></li>
-                <li><a href="#" className="hover:text-primary-foreground/90">FAQ</a></li>
+                <li><a href="#" className="text-slate-400 dark:text-slate-400 hover:text-slate-300 dark:hover:text-slate-300">Features</a></li>
+                <li><a href="#" className="text-slate-400 dark:text-slate-400 hover:text-slate-300 dark:hover:text-slate-300">Pricing</a></li>
+                <li><a href="#" className="text-slate-400 dark:text-slate-400 hover:text-slate-300 dark:hover:text-slate-300">FAQ</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-primary-foreground mb-4">Company</h4>
+              <h4 className="font-semibold text-white dark:text-slate-200 mb-4">Company</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-muted-foreground">About</a></li>
-                <li><a href="#" className="hover:text-muted-foreground">Blog</a></li>
-                <li><a href="#" className="hover:text-muted-foreground">Contact</a></li>
+                <li><a href="#" className="text-slate-400 dark:text-slate-400 hover:text-slate-300 dark:hover:text-slate-300">About</a></li>
+                <li><a href="#" className="text-slate-400 dark:text-slate-400 hover:text-slate-300 dark:hover:text-slate-300">Blog</a></li>
+                <li><a href="#" className="text-slate-400 dark:text-slate-400 hover:text-slate-300 dark:hover:text-slate-300">Contact</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-primary-foreground mb-4">Legal</h4>
+              <h4 className="font-semibold text-white dark:text-slate-200 mb-4">Legal</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-muted-foreground">Privacy</a></li>
-                <li><a href="#" className="hover:text-muted-foreground">Terms</a></li>
+                <li><a href="#" className="text-slate-400 dark:text-slate-400 hover:text-slate-300 dark:hover:text-slate-300">Privacy</a></li>
+                <li><a href="#" className="text-slate-400 dark:text-slate-400 hover:text-slate-300 dark:hover:text-slate-300">Terms</a></li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-slate-800 pt-8 text-center text-sm">
-            <p className="text-muted-foreground">&copy; 2025 StoreBuilder. All rights reserved.</p>
+          <div className="border-t border-slate-800 dark:border-slate-700 pt-8 text-center text-sm">
+            <p className="text-slate-400 dark:text-slate-400">&copy; 2025 StoreBuilder. All rights reserved.</p>
           </div>
         </div>
       </footer>
