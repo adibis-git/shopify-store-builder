@@ -3,6 +3,7 @@
 import { useAuth } from '@/lib/auth-context'
 import { redirect } from 'next/navigation'
 import { Button } from '@/components/ui/button'
+import { ThemeToggle } from '@/components/theme/ThemeToggle'
 import { ShoppingCart, LogOut, User, Menu } from 'lucide-react'
 import { signOut } from '@/lib/auth'
 import { useState } from 'react'
@@ -66,6 +67,7 @@ export default function DashboardLayout({
               <User className="h-4 w-4" />
               <span>{user.email}</span>
             </div>
+            <ThemeToggle />
             <Button
               variant="ghost"
               size="sm"

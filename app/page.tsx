@@ -9,6 +9,7 @@ import { Textarea } from '@/components/ui/textarea'
 import { Label } from '@/components/ui/label'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
+import { ThemeToggle } from '@/components/theme/ThemeToggle'
 import {
   CheckCircle2,
   ShoppingCart,
@@ -79,6 +80,7 @@ export default function LandingPage() {
             <a href="#features" className="text-sm text-slate-600 hover:text-slate-900">Features</a>
             <a href="#pricing" className="text-sm text-slate-600 hover:text-slate-900">Pricing</a>
             <a href="#faq" className="text-sm text-slate-600 hover:text-slate-900">FAQ</a>
+            <ThemeToggle />
             <Dialog open={isOpen} onOpenChange={setIsOpen}>
               <DialogTrigger asChild>
                 <Button size="sm">Get Free Audit</Button>
