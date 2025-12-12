@@ -25,21 +25,43 @@ export default function LandingPage() {
   const [formData, setFormData] = useState({ name: '', email: '', storeUrl: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState('')
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
+    setError('')
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Lead submission:', formData)
-    setSubmitted(true)
-    setTimeout(() => {
-      setSubmitted(false)
-      setFormData({ name: '', email: '', storeUrl: '', message: '' })
-      setIsOpen(false)
-    }, 2000)
+    setIsLoading(true)
+    setError('')
+
+    try {
+      const response = await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+
+      if (!response.ok) {
+        const data = await response.json()
+        throw new Error(data.error || 'Failed to submit form')
+      }
+
+      setSubmitted(true)
+      setTimeout(() => {
+        setSubmitted(false)
+        setFormData({ name: '', email: '', storeUrl: '', message: '' })
+        setIsOpen(false)
+      }, 2000)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred')
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   return (
@@ -113,8 +135,13 @@ export default function LandingPage() {
                       rows={3}
                     />
                   </div>
-                  <Button type="submit" className="w-full">
-                    {submitted ? 'Submitted! ✓' : 'Get Free Audit'}
+                  {error && (
+                    <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded">
+                      {error}
+                    </div>
+                  )}
+                  <Button type="submit" className="w-full" disabled={isLoading || submitted}>
+                    {submitted ? 'Submitted! ✓' : isLoading ? 'Submitting...' : 'Get Free Audit'}
                   </Button>
                 </form>
               </DialogContent>
