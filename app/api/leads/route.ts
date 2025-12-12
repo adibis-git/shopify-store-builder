@@ -13,11 +13,11 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey)
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { name, email, storeUrl, message } = body
+    const { name, email, contactNumber, bio } = body
 
-    if (!name || !email) {
+    if (!name || !email || !contactNumber) {
       return NextResponse.json(
-        { error: 'Name and email are required' },
+        { error: 'Name, email, and contact number are required' },
         { status: 400 }
       )
     }
@@ -28,8 +28,8 @@ export async function POST(request: NextRequest) {
         {
           name,
           email,
-          store_url: storeUrl || null,
-          message: message || null,
+          contact_number: contactNumber,
+          bio: bio || null,
           created_at: new Date().toISOString(),
         },
       ])

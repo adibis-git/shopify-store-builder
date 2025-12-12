@@ -22,7 +22,7 @@ import {
 } from 'lucide-react'
 
 export default function LandingPage() {
-  const [formData, setFormData] = useState({ name: '', email: '', storeUrl: '', message: '' })
+  const [formData, setFormData] = useState({ name: '', email: '', contactNumber: '', bio: '' })
   const [submitted, setSubmitted] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
@@ -54,7 +54,7 @@ export default function LandingPage() {
       setSubmitted(true)
       setTimeout(() => {
         setSubmitted(false)
-        setFormData({ name: '', email: '', storeUrl: '', message: '' })
+        setFormData({ name: '', email: '', contactNumber: '', bio: '' })
         setIsOpen(false)
       }, 2000)
     } catch (err) {
@@ -115,23 +115,25 @@ export default function LandingPage() {
                     />
                   </div>
                   <div>
-                    <Label htmlFor="storeUrl">Store URL (optional)</Label>
+                    <Label htmlFor="contactNumber">Contact Number</Label>
                     <Input
-                      id="storeUrl"
-                      name="storeUrl"
-                      value={formData.storeUrl}
+                      id="contactNumber"
+                      name="contactNumber"
+                      type="tel"
+                      value={formData.contactNumber}
                       onChange={handleInputChange}
-                      placeholder="https://yourstore.com"
+                      placeholder="+1 (555) 000-0000"
+                      required
                     />
                   </div>
                   <div>
-                    <Label htmlFor="message">Tell us about your store</Label>
+                    <Label htmlFor="bio">Tell us about yourself</Label>
                     <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
+                      id="bio"
+                      name="bio"
+                      value={formData.bio}
                       onChange={handleInputChange}
-                      placeholder="What are your main challenges?"
+                      placeholder="Share a brief bio about your background and interest in dropshipping..."
                       rows={3}
                     />
                   </div>
