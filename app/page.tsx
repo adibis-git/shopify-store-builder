@@ -388,12 +388,12 @@ export default function LandingPage() {
           </p>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Shopify Option */}
-            <Card className="bg-white dark:bg-white/5 dark:backdrop-blur-xl border-slate-200 dark:border-white/10 hover:border-slate-300 dark:hover:border-white/20 transition-all duration-300">
+            <Card className="bg-white dark:bg-slate-800/50 dark:backdrop-blur-xl border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 transition-all duration-300">
               <CardHeader>
-                <CardTitle className="dark:text-slate-50">Shopify Store Setup</CardTitle>
-                <CardDescription className="dark:text-slate-400">Hosted & Managed</CardDescription>
-                <div className="text-3xl font-bold mt-4 dark:text-slate-50">$2,500</div>
-                <p className="text-sm text-muted-foreground dark:text-slate-400">One-time setup</p>
+                <CardTitle className="text-slate-900 dark:text-white">Shopify Store Setup</CardTitle>
+                <CardDescription className="text-slate-600 dark:text-slate-300">Hosted & Managed</CardDescription>
+                <div className="text-3xl font-bold mt-4 text-slate-900 dark:text-white">$2,500</div>
+                <p className="text-sm text-slate-500 dark:text-slate-400">One-time setup</p>
               </CardHeader>
               <CardContent className="space-y-4">
                 <ul className="space-y-3">
@@ -407,13 +407,13 @@ export default function LandingPage() {
                   ].map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3">
                       <CheckCircle2 className="h-5 w-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground dark:text-slate-50">{item}</span>
+                      <span className="text-slate-700 dark:text-slate-200">{item}</span>
                     </li>
                   ))}
                 </ul>
                 <Dialog open={isOpen} onOpenChange={setIsOpen}>
                   <DialogTrigger asChild>
-                    <Button className="w-full mt-6 bg-slate-900 dark:bg-white/10 hover:bg-slate-800 dark:hover:bg-white/20 transition-all duration-300">Get Started</Button>
+                    <Button className="w-full mt-6 bg-slate-900 dark:bg-slate-700 hover:bg-slate-800 dark:hover:bg-slate-600 text-white transition-all duration-300">Get Started</Button>
                   </DialogTrigger>
                 </Dialog>
               </CardContent>
